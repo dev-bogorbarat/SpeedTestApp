@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Speed-T | Internet Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Manifest untuk PWA (agar bisa dijadikan APK) -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Speed-T</h1>
+            <p class="developer">Developed by <span>Dion-dev</span></p>
+            
+            <div class="status-bar">
+                <span class="status-badge">Status: GRATIS (FREE)</span>
+                <button class="btn-upgrade">👑 UPGRADE PRO</button>
+            </div>
+        </header>
+
+        <!-- Kartu Utama -->
+        <main class="main-card">
+            <div class="card-header">
+                <span class="tag">FITUR GRATIS</span>
+                <h2>Uji Kecepatan Internet</h2>
+                <p>Lakukan tes Ping, Jitter, dan Kecepatan Download secara gratis.</p>
+            </div>
+
+            <!-- Grid Hasil -->
+            <div class="results-grid">
+                <div class="result-box">
+                    <span class="label">PING</span>
+                    <span class="value" id="ping">-- ms</span>
+                </div>
+                <div class="result-box">
+                    <span class="label">DOWNLOAD</span>
+                    <span class="value" id="download">-- Mbps</span>
+                </div>
+                <div class="result-box">
+                    <span class="label">JITTER</span>
+                    <span class="value" id="jitter">-- ms</span>
+                </div>
+                <div class="result-box locked">
+                    <span class="label">UPLOAD <span class="pro-badge">PRO</span></span>
+                    <span class="value">🔒 Mbps</span>
+                </div>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <div class="action-buttons">
+                <button id="startBtn" class="btn-start">🚀 MULAI TES SEKARANG</button>
+                <button id="resetBtn" class="btn-reset">🔄 RESET</button>
+            </div>
+
+            <p class="info-text">Tekan "MULAI TES SEKARANG" untuk menguji jaringan Anda.</p>
+
+            <!-- Grafik (Placeholder) -->
+            <div class="chart-container">
+                <h3>Grafik Latensi Real-Time</h3>
+                <canvas id="latencyChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
