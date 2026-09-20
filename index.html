@@ -9,21 +9,49 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f172a">
 </head>
-<body>    <!-- ===== INTRO SPLASH SCREEN ===== -->
-    <div id="introScreen" class="intro-screen">
-        <div class="intro-content">
-            <h1 class="intro-logo">Speed-T</h1>
-            <p class="intro-sub">Internet Speed Test</p>
-            <div class="intro-loader">
-                <div class="loader-bar"></div>
+<body>   
+    <div class="app-container">
+        <    <!-- ===== MODAL UPGRADE PRO ===== -->
+    <div id="proModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModal">✕</button>
+            
+            <div class="modal-header">
+                <h2>👑 Upgrade ke PRO</h2>
+                <p>Buka semua fitur premium Speed-T</p>
             </div>
-            <p class="intro-dev">Developed by Dion-dev</p>
+
+            <div class="modal-features">
+                <div class="feature-item">✅ Upload Speed Test</div>
+                <div class="feature-item">✅ Tes Tanpa Batas</div>
+                <div class="feature-item">✅ Grafik Latensi Detail</div>
+                <div class="feature-item">✅ Tanpa Iklan</div>
+            </div>
+
+            <div class="modal-price">
+                <span class="price-label">Harga Spesial</span>
+                <span class="price-value">Rp 25.000</span>
+                <span class="price-note">Bayar sekali, akses selamanya</span>
+            </div>
+
+            <div class="qris-section">
+                <p class="qris-title">📱 Scan QRIS untuk Membayar</p>
+                <div class="qris-box">
+                    <!-- QR Code Generator (ganti link ini dengan QRIS asli Anda nanti) -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=SpeedT-PRO-Payment-Rp25000" 
+                         alt="QRIS Payment" 
+                         class="qris-image">
+                </div>
+                <p class="qris-note">Scan dengan GoPay, OVO, Dana, ShopeePay, atau M-Banking</p>
+            </div>
+
+            <button id="confirmPayment" class="btn-confirm-pay">
+                ✅ SAYA SUDAH BAYAR
+            </button>
+            <p class="modal-footer-note">Setelah pembayaran dikonfirmasi, akses PRO langsung aktif.</p>
         </div>
     </div>
-    <!-- ===== AKHIR INTRO ===== -->
-
-    <div class="app-container">
-        <!-- Header -->
+    <!-- ===== AKHIR MODAL ===== -->!-- Header -->
         <header class="header">
             <h1 class="logo">Speed-T</h1>
             <p class="developer">Developed by <span>Dion-dev</span></p>
